@@ -9,8 +9,10 @@ open class Shape {
 
 class Rectangle : Shape() {
     override val corner: Int = 4
+    // super properties
     val parentCorner: Int = super.corner
 
+    // super function
     override fun printName() {
         println("This is Rectangle")
         super.printName()

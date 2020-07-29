@@ -5,7 +5,7 @@ class Address {
     var city: String = ""
     var country: String = "Indonesia"
 
-    // Without Primary Constructor
+    // without Primary Constructor
     constructor(paramStreet: String, paramCity: String){
         street = paramStreet
         city = paramCity

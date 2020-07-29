@@ -4,16 +4,23 @@ import Pertemuan1.data.Person
 
 fun main() {
 
-    val shaufi = Person() //Membuat Object
-    shaufi.firstName = "Shaufi" //Memanipulasi Properties
-
+    // Membuat Object
+    val shaufi = Person()
     val udil = Person()
-    udil.firstName = "Udil"
-
     val ucil = Person()
-    ucil.firstName = "Udil"
 
-    println(shaufi.firstName) //Mengakses Properties
+    // Mengakses Object
+    println(shaufi)
+    println(udil)
+    println(ucil)
+
+    //Memanipulasi Properties kalau tipenya mutable
+    shaufi.firstName = "Shaufi"
+    udil.firstName = "Udil"
+    ucil.firstName = "Ucil"
+
+    //Mengakses Properties
+    println(shaufi.firstName)
     println(udil.firstName)
     println(ucil.firstName)
 

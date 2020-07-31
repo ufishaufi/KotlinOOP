@@ -14,7 +14,6 @@ class Cat : Animal() {
 
 class Dog : Animal(){
     override val name: String = "Dog"
-
     override fun run() {
         println("Dog run")
     }

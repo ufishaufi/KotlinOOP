@@ -4,7 +4,8 @@ import Pertemuan3.data.Television
 
 fun main(args: Array<String>) {
     val tv = Television()
-    // tv.brand = "Samsung" bisa juga
+//  bisa juga
+//  tv.brand = "Samsung"
     tv.initTelevision("Samsung")
     println(tv.brand)
 }

@@ -2,7 +2,8 @@ package Pertemuan3.data
 
 class Note(title: String) {
     var title: String = title
-        // get() = field bentuk lain
+        // get() = field
+        // bentuk lain
         get() {
             println("Call getter function")
             return field

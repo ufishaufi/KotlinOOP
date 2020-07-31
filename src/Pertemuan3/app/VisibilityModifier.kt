@@ -7,6 +7,6 @@ fun main() {
     val teacher = SuperTeacher("Shaufi")
     println(teacher.name)
     // error karena tidak bisa mengakses modifier private
-    // teacher.teach()
+    //teacher.teach()
     teacher.test()
 }

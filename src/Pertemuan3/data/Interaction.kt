@@ -4,7 +4,8 @@ interface Interaction {
     val name: String
     fun sayHello(name: String): Unit
 
-    /*concreate function
+    /*
+    concreate function
     fun sayHello(name: String): Unit {
         println("Hello $name, My name is ${this.name}")
     }

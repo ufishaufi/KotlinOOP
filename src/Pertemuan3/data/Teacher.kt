@@ -1,6 +1,6 @@
 package Pertemuan3.data
 
-open class Teacher(val name: String) {
+open class Teacher(internal val name: String) {
     private fun teach() {
         println("Teach!")
     }
@@ -12,7 +12,7 @@ open class Teacher(val name: String) {
 
 class SuperTeacher(name: String) : Teacher(name) {
 
-    override public fun test() {
+    public override fun test() {
         super.test()
     }
 }

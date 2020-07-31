@@ -7,7 +7,7 @@ class Application(val name: String) {
             return name.toUpperCase()
         }
     }
-
+    // inner Object
     object Utilities {
         fun toUpper(name: String): String {
             return name.toUpperCase()

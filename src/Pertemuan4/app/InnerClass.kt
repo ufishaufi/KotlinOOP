@@ -5,14 +5,14 @@ import Pertemuan4.data.Boss
 fun main() {
     val boss = Boss("Shaufi")
     val employee = boss.Employee("Udil")
-    val employee2 = boss.Employee("Ucil")
+    val employee1 = boss.Employee("Ucil")
 
-    val boss2 = Boss("Rudi")
-    val employee3 = boss2.Employee("Udil")
-    val employee4 = boss2.Employee("Ucil")
+    val boss1 = Boss("Rudi")
+    val employee2 = boss1.Employee("Udil")
+    val employee3 = boss1.Employee("Ucil")
 
     employee.hi()
+    employee1.hi()
     employee2.hi()
     employee3.hi()
-    employee4.hi()
 }

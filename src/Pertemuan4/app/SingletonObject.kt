@@ -6,21 +6,16 @@ import Pertemuan4.data.Utilities
 fun main() {
     Utilities.name = "Dirubah"
     println(Utilities.toUpper("Shaufi"))
-    A()
-    B()
+    a()
+    b()
 
     // call inner Object
     println(Application.Utilities.toUpper("Shaufi"))
 
-    // call companion Object
-    println(Application.toUppers("Shaufi "))
-    println(Application.Companion.toUppers("Shaufi"))
-
-
 }
-    fun A(){
+    fun a(){
         println(Utilities.name)
     }
-    fun B() {
+    fun b() {
         println(Utilities.name)
     }

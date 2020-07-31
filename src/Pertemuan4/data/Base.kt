@@ -14,8 +14,9 @@ class MyBase: Base {
         println("Good bye $name")
     }
 }
-// Delegate write manual
 /*
+Delegate write manual
+
 class MyBaseDelegate(val base: Base): Base {
 
     override fun sayHello(name: String) {

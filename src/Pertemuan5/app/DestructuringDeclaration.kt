@@ -13,29 +13,37 @@ fun minMax(value1: Int, value2: Int): MinMax{
     }
 }
 
+// Destructuring lambda function
 fun login(login: Login, callback: (Login) -> Boolean): Boolean {
     return callback(login)
 }
 
 fun main() {
-    val game = Game("Dota", 500000)
 
+//  Access Destruction Declaration
+    val game = Game("Dota", 500000)
     val(name, price) = game
     println(name)
     println(price)
 
-//    val result = minMax(10, 100)
-//    val min = result.min
-//    val max = result.max
-//  varibel tidak digunakan user _(underscore)
+//  Access Destruction Function
+//  val result = minMax(10, 100)
+//  val min = result.min
+//  val max = result.max
+
+//  val (min, max) = minMax(10, 100)
+//  println(min)
+//  println(max)
+
+//  variabel tidak digunakan user gunakan _(underscore)
     val (min, _) = minMax(10, 100)
-//    println(max)
     println(min)
 
+//  Access Desctructing Lambda Parameter
     val login = Login("shaufi", "rahasia")
-//    login(login) {
-//        login -> login.username == "shaufi" && login.password == "rahasia"
-//    }
+//  login(login) {
+//      login -> login.username == "shaufi" && login.password == "rahasia"
+//  }
     login(login) { (username, password) ->
         username == "shaufi" && password == "rahasia"}
 }

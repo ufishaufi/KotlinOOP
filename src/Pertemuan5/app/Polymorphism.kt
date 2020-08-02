@@ -6,7 +6,7 @@ import Pertemuan2.data.VicePresident
 import Pertemuan4.data.Boss
 
 fun main() {
-    var employee = Employee("Shaufi")
+    var employee: Employee = Employee("Shaufi")
     employee.sayHello("Eko")
 
     employee = Manager("Shaufi")

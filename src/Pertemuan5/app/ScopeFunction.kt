@@ -32,6 +32,5 @@ fun main() {
     val result4: String = with(student){
         "Name ${this.name}, Age ${this.age}"
     }
-
     println(result4)
 }

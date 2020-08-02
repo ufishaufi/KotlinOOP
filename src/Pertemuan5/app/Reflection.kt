@@ -7,6 +7,25 @@ import Pertemuan5.exception.ValidationException
 import kotlin.reflect.full.findAnnotation
 import kotlin.reflect.full.memberProperties
 
+fun validateRequest(request: Any){
+    val clazz = request::class
+    val properties = clazz.memberProperties
+
+    // iterate satu satu, lalu cek kalau ada annotation @NotBlank
+    for (property in properties){
+        if (property.findAnnotation<NotBlank>() != null) {
+            val value = property.call(request)
+            when(value) {
+                is String -> {
+                    if ("" == value){
+                        throw ValidationException("${property.name} is blank")
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*
 fun validateRequest(request: CreateProductRequest) {
 
@@ -26,28 +45,6 @@ fun validateRequest(request: CreateCategoryRequest) {
 }
 
 */
-
-fun validateRequest(request: Any){
-    val clazz = request::class
-    val properties = clazz.memberProperties
-
-    // iterate satu satu, lalu cek kalau ada annotation @NotBlank
-    for (property in properties){
-        if (property.findAnnotation<NotBlank>() != null) {
-            val value = property.call(request)
-            when(value) {
-                is String -> {
-                    if ("" == value){
-                        throw ValidationException("${property.name} is blank")
-                    }
-                }
-//            val value: String = property.call(request) as String
-//            if ("" == value){
-//                throw ValidationException("${property.name} is blank")
-            }
-        }
-    }
-}
 
 fun main() {
     val request = CreateProductRequest("1", "Indomie", 2000)
